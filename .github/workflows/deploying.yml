@@ -76,7 +76,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Download PWA artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: pwa
         path: ./dist_pwa
@@ -85,7 +85,7 @@ jobs:
       run: cd dist_pwa && zip -r ../movie-web.pwa.zip .
 
     - name: Download normal artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: normal
         path: ./dist_normal
